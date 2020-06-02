@@ -1,17 +1,29 @@
 :root {
     --title-color: #322153;
+    --primary-color: #34cb79;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 body {
     background: #f0f0f5;
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #page-home {
@@ -21,8 +33,11 @@ a {
 }
 
 #page-home .content {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 1100px;
+    height: 100%;
     width: 90%;
     
 }
@@ -50,9 +65,81 @@ a {
 
 #page-home main {
     max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #page-home main h1 {
     font-size: 54px;
-    color: var(--title-color);
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    
+    margin-top: 40px;
+    max-width: 360px;
+    height: 72px;
+    transition: 400ms;
+    width: 100%;
+}
+
+#page-home main a:hover {
+    background-color: #2fb866;
+}
+
+#page-home main a span {
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.08);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    height: 72px;
+    width: 72px;
+}
+
+#page-home main a span::after {
+    background-image: url('../assets/search.svg');
+    content: "";
+    height: 20px;
+    width: 20px;
+}
+
+#page-home main a strong {
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #page-home {
+        background-position: 70vw;
+    }
+
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        bottom: 48px;
+        position: absolute;
+        left: 50px;
+        transform: translateX(-50%);
+    }
+
+    #page-home main {
+        align-items: center;
+    }
 }
