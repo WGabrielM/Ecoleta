@@ -21,14 +21,54 @@
 
         </header>
 
-         <main>
-             <h1>Seu marketplace de coleta de resíduos</h1>
-        
-            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-                    
-            <a href="#"><span></span> <strong>Pontos de coleta</strong> </a>
+        <form action="">
+
+            <h1>Cadastro do ponto de coleta</h1>
+
+            <fieldset>
+                <legend>
+                    <h2>Dados da Entidade</h2>
+                </legend>
             
-        </main>
+                <div class="field">
+                    <label for="name">Nome da Entidade</label>
+                    <input type="text" name="name">
+
+                </div>
+
+                <div class="field-grupo">
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address">
+                    </div>
+
+                    <div class="field">
+                        <label for="address2">Número/Complemento</label>
+                        <input type="text" name="address2">
+                    </div>
+                </div>
+
+                <div class="field-grupo">
+                    <div class="field">
+                        <label for="state">Estado</label>
+                        <select name="uf">
+                            <option value="">Selecione o Estado</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Cadastrar ponto de coleta</button>
+
+        </form>
 
     </div>
 </body>
