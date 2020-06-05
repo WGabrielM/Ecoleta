@@ -41,7 +41,7 @@ body::after {
 }
 
 main {
-    margin-top: 48px;
+    margin: 48px;
 
 }
 
@@ -59,9 +59,11 @@ main .cards {
     gap: 24px;
 }
 
-main img {
+main .card img {
     width: 100%;
     height: auto;
+
+    object-fit: cover;
 
     border-radius: 8px 8px 0 0;
 }
